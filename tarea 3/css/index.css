@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    font-family: "Montserrat", "Be Vietnam Pro", "Lato", "Open Sans", sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    position: relative;
+    height: 100%;
+}
+
+h2.display-5 {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.btn-down a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn-down a:hover {
+  color: inherit;
+}
+
+
+.video-section {
+  height: 100vh;
+  overflow: hidden;
+  clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+  position: relative;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.btn-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  color: #e63900;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10;
+  animation: bounce 2s infinite;
+  transition: color 0.3s ease;
+}
+
+.btn-down:hover {
+  color: #6c35ac;
+}
+
+
+/* ----------- inicio ----------- */
+
+.seccion {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+
+.logo {
+  max-width: 500px;
+  width: 90%;
+  height: auto;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 2.5rem;
+  color: white;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+.text-highlight {
+  color: #e9e9e9;
+}
+
+.about-event {
+  background: linear-gradient(to bottom, #000000 0%, #0a0a0a 100%);
+}
+
+
+.about-event .overlay-box {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  max-width: 90%;
+  background: white;
+  border-left: 4px solid #e63900;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.about-event .btn-outline-danger {
+  border-width: 2px;
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .about-event .overlay-box {
+    position: static;
+    margin-top: 1rem;
+    border-left: none;
+  }
+}
+
+/* ----------- Line-Up ----------- */
+
+.lineup-section {
+  background: #000 url('../img/DJ.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.lineup-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+  z-index: -1;
+}
+
+.zone-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff3c00;
+  padding-left: 12px;
+  color: #fff;
+}
+
+.artist-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(255, 60, 0, 0.5);
+}
+
+.artist-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.artist-time {
+  color: #ff3c00;
+  font-weight: bold;
+}
+
+.artist-bio {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+
+/* ----------- Entradas ----------- */
+
+
+.entradas-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.entrada-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.entrada-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+}
+
+.icon-box {
+  font-size: 2.5rem;
+  color: #ff3c00;
+}
+
+.entrada-card h5 {
+  font-weight: bold;
+  color: #fff;
+}
+
+.entrada-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.read-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #ff3c00;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.read-btn:hover {
+  box-shadow: 0 0 10px rgba(255, 60, 0, 0.5);
+}
+
+.entradas-section {
+  background: url('../img/fiesta-1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.entradas-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* oscurece el fondo */
+  z-index: 0;
+}
+
+.entradas-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ----------- patrocinadores ----------- */
+
+.patrocinadores-section img {
+  width: 100%;
+  height: 80px; /* altura estándar para todos */
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.patrocinadores-section img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+
+/* ----------- Contacto ----------- */
+
+.social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #ff3c00;
+   transform: scale(1.2);
+}
+
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #6c35ac;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ----------- footer ----------- */
+
+.footer {
+  position: relative;
+  clip-path: polygon(50% 0, 100% 25%, 100% 100%, 0 98%, 0 25%);
+  background-color: #6c35ac;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  z-index: 1;
+}
+
+.footer .social-icons a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #ff3c00;
+}
+
+/* ----------- arriba ----------- */
+
+.btn-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+  color: #ff3c00;
+  border: none;
+  padding: 0;
+  font-size: 2rem;
+  z-index: 999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: none;
+}
+
+.btn-top:hover {
+  color: #6c35ac;
+}
